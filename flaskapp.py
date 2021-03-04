@@ -30,12 +30,12 @@ def home():
 <p>A prototype API for distant reading of science fiction novels.</p>'''
 
 
-@app.route('/api/v1/resources/books/all', methods=['GET'])
+@app.route('/app/v1/resources/books/all', methods=['GET'])
 def api_all():
     return jsonify(books)
 
 
-@app.route('/api/v1/resources/books', methods=['GET'])
+@app.route('/app/v1/resources/books', methods=['GET'])
 def api_id():
     # Check if an ID was provided as part of the URL.
     # If ID is provided, assign it to a variable.
