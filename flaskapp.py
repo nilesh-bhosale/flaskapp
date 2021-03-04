@@ -1,7 +1,7 @@
-import flask
+from flask import Flask
 from flask import request, jsonify
 
-app = flask.Flask(__name__)
+app = Flask(__name__)
 app.config["DEBUG"] = True
 
 # Create some test data for our catalog in the form of a list of dictionaries.
@@ -58,4 +58,5 @@ def api_id():
     # Python dictionaries to the JSON format.
     return jsonify(results)
 
-app.run()
+if __name__ == "__main__": 
+    app.run(host ='0.0.0.0', port = 5003, debug = True)  
